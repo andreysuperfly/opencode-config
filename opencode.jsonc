@@ -1,0 +1,64 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "openrouter": {
+      "name": "OpenRouter",
+      "api": "openai",
+      "options": {
+        "baseURL": "https://openrouter.ai/api/v1",
+        "apiKey": "YOUR_OPENROUTER_API_KEY"
+      },
+      "models": {
+        "cohere/north-mini-code:free": {
+          "name": "Cohere North Mini Code Free"
+        },
+        "qwen/qwen3-coder:free": {
+          "name": "Qwen 3 Coder Free"
+        },
+        "liquid/lfm-2.5-1.2b-thinking:free": {
+          "name": "LFM 2.5 Thinking Free"
+        },
+        "google/gemma-4-26b-a4b-it": {
+          "name": "Gemma 4 26B"
+        },
+        "google/gemma-4-26b-a4b-it:free": {
+          "name": "Gemma 4 26B Free"
+        },
+        "z-ai/glm-5.2": {
+          "name": "GLM 5.2"
+        },
+        "deepseek/deepseek-v4-pro": {
+          "name": "DeepSeek V4 Pro"
+        },
+        "deepseek/deepseek-v4-flash": {
+          "name": "DeepSeek V4 Flash"
+        },
+        "tencent/hy3-preview": {
+          "name": "Hy3 Preview"
+        },
+        "openrouter/owl-alpha": {
+          "name": "OWL Alpha"
+        },
+        "google/gemini-2.5-flash-lite": {
+          "name": "Gemini 2.5 Flash Lite"
+        },
+        "openai/gpt-4.1-mini": {
+          "name": "GPT 4.1 Mini"
+        }
+      }
+    }
+  },
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "small_model": "openrouter/google/gemma-4-26b-a4b-it",
+  "compaction": {
+    "auto": true,
+    "prune": true,
+    "reserved": 10000
+  },
+  "lsp": true,
+  "agent": {
+    "plan": {
+      "model": "openrouter/deepseek/deepseek-v4-pro"
+    }
+  }
+}
