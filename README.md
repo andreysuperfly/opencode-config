@@ -55,9 +55,18 @@ cd project && opencode
 
 ## Модели
 
-| Роль | Модель |
-|---|---|
-| Build | `openrouter/deepseek/deepseek-v4-pro` |
-| Plan | `openrouter/deepseek/deepseek-v4-pro` |
-| Small | `openrouter/google/gemma-4-26b-a4b-it` |
-| Картинки | Переключиться на `z-ai/glm-5.2` через `/model` |
+| Роль | Модель | Зачем |
+|---|---|---|
+| Build | `openrouter/deepseek/deepseek-v4-pro` | Основной кодинг |
+| Plan | `openrouter/deepseek/deepseek-v4-pro` | Планирование |
+| Small | `openrouter/google/gemma-4-26b-a4b-it` | Фоновые задачи |
+| Картинки | Переключиться на `z-ai/glm-5.2` через `/model` | |
+
+### Сабагенты
+
+| Агент | Модель | Для чего |
+|---|---|---|
+| **general** | `deepseek-v4-pro` | Сложные задачи, пишет код через Task tool |
+| **explore** | `deepseek-v4-flash` | Только чтение: grep, glob, поиск по коду |
+
+**Почему так:** explore делает только поиск/чтение — flash хватает, а токенов жрёт меньше. general может писать код — нужна полная мощь v4-pro.

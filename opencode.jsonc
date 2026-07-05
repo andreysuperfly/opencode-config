@@ -59,6 +59,12 @@
   "agent": {
     "plan": {
       "model": "openrouter/deepseek/deepseek-v4-pro"
+    },
+    "general": {
+      "model": "openrouter/deepseek/deepseek-v4-pro"
+    },
+    "explore": {
+      "model": "openrouter/deepseek/deepseek-v4-flash"
     }
   }
 }
